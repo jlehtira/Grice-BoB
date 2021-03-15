@@ -224,7 +224,7 @@ for str_filename in list_SIGRIDfilenames:
 
                 rhop = 1000 #conc*100
                 visco = 12.0        # default 1.2
-                tau_yield = conc    # default 0.0001
+                tau_yield = 100000    # default 0.0001
 
                 if (conc == 11):
                     visco = 1200.0
@@ -242,7 +242,7 @@ for str_filename in list_SIGRIDfilenames:
                 print (PFX, "    <visco value=\"",visco,"\" />", file=f)
                 print (PFX, "    <tau_yield value=\"",tau_yield,"\" />", file=f)
                 print (PFX, "    <HBP_m value=\"100\" />", file=f)
-                print (PFX, "    <HBP_n value=\"0.8\" comment=\"lt 1: shear thinning gt 1: shear thickening\" />", file=f)
+                print (PFX, "    <HBP_n value=\"1.0\" comment=\"lt 1: shear thinning gt 1: shear thickening\" />", file=f)
                 print (PFX, "    <phasetype value=\"0\" comment=\"Non-Newtonian=0 only option in v5.0\" />", file=f)
                 print (PFX, "</phase>", file=f)
 
